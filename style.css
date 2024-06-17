@@ -1,37 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #23272a;
   display: flex;
-  align-content: center;
-  text-align: center;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
 }
 
-.home a{
+.home{
+  text-align: center;
+}
+
+.home a {
   color: #7289da;
   cursor: pointer;
   text-decoration: none;
 }
-.home a:hover{
+
+.home a:hover {
   color: #879ae0;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   background-color: #2c2f33;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 320px;
   text-align: center;
 }
 
@@ -40,18 +43,29 @@ h1 {
   margin-bottom: 20px;
 }
 
+form {
+  width: 100%;
+}
+
 label {
   display: block;
   margin: 10px 0 5px;
+  text-align: left;
+  font-weight: 500;
 }
 
 input {
-  width: 100%;
+  width: calc(100% - 16px);
   padding: 8px;
   margin-bottom: 10px;
   background-color: #99aab5;
   border: 1px solid #23272a;
   border-radius: 4px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #7289da;
 }
 
 button {
@@ -62,10 +76,17 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
 }
 
 button:hover {
   background-color: #8698da;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-top: 10px;
 }
 
 #result {

@@ -4,6 +4,17 @@ function calculateFuel() {
   const efficiency = document.getElementById('efficiency').value;
   const price = document.getElementById('price').value;
 
+  // Verifica se todos os campos estão preenchidos
+  if (!distance || !efficiency || !price) {
+    // Exibe uma mensagem de erro se algum campo estiver vazio
+    const errorDiv = document.getElementById('error');
+    errorDiv.innerHTML = "Por favor, preencha todos os campos.";
+    return;
+  }
+
+  // Limpa a mensagem de erro se todos os campos estiverem preenchidos
+  document.getElementById('error').innerHTML = '';
+
   // Calcula o consumo de combustível
   const fuelNeeded = distance / efficiency;
   const totalCost = fuelNeeded * price;
